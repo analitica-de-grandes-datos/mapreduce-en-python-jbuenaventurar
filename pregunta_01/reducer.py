@@ -7,7 +7,7 @@ if __name__ == '__main__':
     curkey = None
     total = 0
 
-    for line in sys.stdin("\t"):
+    for line in sys.stdin:
 
         key , val = line.split("\t")
         val = int(val)
