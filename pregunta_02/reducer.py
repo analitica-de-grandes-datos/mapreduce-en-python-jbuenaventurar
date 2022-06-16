@@ -2,27 +2,24 @@
 # >>> Escriba el codigo del reducer a partir de este punto <<<
 #
 import sys
-import sys if __name__ == '__main__':
 
-    curkey=None
-    maximo=0
+from pyrsistent import s 
+
+if __name__ == '__main__':
+
+    last_key=None
+    max_val=0
 
     for line in sys.stdin:
 
-        key=line[0].split('\t')
-        val=line[1].split('\t')
-        val=int(val)
-
-        if key == curkey and val > maximo:
-
-            maximo=val
-
+        key , val = line.strip().split("\t")
+        
+        if last_key and last_key != key:
+            print("%s\t%s" % (last_key, max_val))
+            (last_key, max_val) = (key, int(val))
         else:
-            if curkey is not None:
-                
-                sys.stdout.write("{}\t{}\n".format(curkey, maximo))
-
-            curkey=key
-            maximo=maximo
+            (last_key, max_val) = (key, max(max_val, int(val)))
     
-    sys.stdout.write("{}\t{}\n".format(curkey, maximo))
+    sys.stdout.write("{}\t{}\n".format(last_key, max_val))
+
+        
