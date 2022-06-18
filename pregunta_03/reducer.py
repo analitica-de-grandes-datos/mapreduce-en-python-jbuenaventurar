@@ -6,8 +6,13 @@ import operator
 
 if __name__ == '__main__':
     
-    dic={}
+    dict={}
 
     for line in sys.stdin:
-        line.split("\t")
-        print(line[1])    
+        key, val = line.split("\t")
+        val= int(val)
+        dict[key]=val
+        
+    sorted_dict = sorted(dict.items(), key=operator.itemgetter(1))
+    for linea in sorted_dict:
+        sys.stdout.write("{},{}\n".format(linea[0], linea[1])) 
