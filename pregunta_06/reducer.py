@@ -1,11 +1,7 @@
 #
 # >>> Escriba el codigo del reducer a partir de este punto <<<
 #
-from multiprocessing.sharedctypes import Value
 import sys
-from pandas import value_counts
-
-from pyrsistent import s 
 
 if __name__ == '__main__':
 
