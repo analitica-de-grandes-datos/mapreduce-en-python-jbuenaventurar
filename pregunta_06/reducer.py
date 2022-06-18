@@ -34,10 +34,10 @@ if __name__ == '__main__':
             
         else:
             if curkey is not None:
-                sys.stdout.write("{} {} {}\n".format(curkey, max_val, min_val))
+                sys.stdout.write("{}\t{}\t{}\n".format(curkey, max_val, min_val))
             
             curkey = key
             max_val = val
             min_val = val
     
-    sys.stdout.write("{} {} {}\n".format(curkey, max_val, min_val))
+    sys.stdout.write("{}\t{}\t{}\n".format(curkey, max_val, min_val))
