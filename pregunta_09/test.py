@@ -5,7 +5,8 @@ result = os.popen("cat data.csv | python3 mapper.py | sort | python3 reducer.py"
 
 lines = [line.strip().replace("\n", "") for line in result.split("\n")]
 
-expected = """C   1994-07-27   1	
+expected = """
+C   1994-07-27   1	
 C   1991-02-12   2	
 A   1990-07-22   4	
 A   1990-09-26   5	
