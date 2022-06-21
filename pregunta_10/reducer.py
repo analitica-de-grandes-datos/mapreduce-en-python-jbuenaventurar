@@ -22,6 +22,7 @@ if __name__ == '__main__':
     c=[]
     d=[]
     f=[]
+    g=[]
     h=[]
     i=[]
     for line in sys.stdin:
@@ -40,6 +41,8 @@ if __name__ == '__main__':
                 d.append(val)
             if key=='F':
                 f.append(val)
+            if key=='G':
+                g.append(val)
             if key=='H':
                 h.append(val)
             if key=='I':
@@ -48,8 +51,8 @@ if __name__ == '__main__':
     b.sort()
     c.sort()
     d.sort()
-    
     f.sort()
+    g.sort()
     h.sort()
     i.sort()
     write("A",a)
@@ -57,15 +60,7 @@ if __name__ == '__main__':
     write("C",c)
     write("D",d)
     write("F",f)
+    write("G",g)
     write("H",h)
     write("I",i)
-        
-    #     else:
-    #         if curkey is not None:
-    #             sys.stdout.write("{}\t{}\n".format(curkey, values))
-        
-            
-    #         curkey = key
-    #         values = val
-    # sys.stdout.write("{}\t{}\n".format(curkey, valores))
     
