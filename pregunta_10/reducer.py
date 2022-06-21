@@ -7,10 +7,10 @@ def write(letra, lista):
     str_aux=""
     for i in range(len(lista)):
         if i==0:
-            str_aux+=" "+(str(lista[i]))
+            str_aux+="\t"+(str(lista[i]))
         else:
             str_aux+=(","+str(lista[i]))
-    sys.stdout.write(letra+" "+str_aux+"\n")
+    sys.stdout.write(letra+"\t"+str_aux+"\n")
 
 if __name__ == '__main__':
 
