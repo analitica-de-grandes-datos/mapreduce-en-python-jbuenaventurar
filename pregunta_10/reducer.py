@@ -3,7 +3,8 @@
 #
 import sys
 
-def write(letra, lista):
+if __name__ == '__main__':
+    def write(letra, lista):
     str_aux=""
     for i in range(len(lista)):
         if i==0:
@@ -11,8 +12,6 @@ def write(letra, lista):
         else:
             str_aux+=(","+str(lista[i]))
     sys.stdout.write(letra+"\t"+str_aux+"\n")
-
-if __name__ == '__main__':
 
     curkey=None
     valores=None
