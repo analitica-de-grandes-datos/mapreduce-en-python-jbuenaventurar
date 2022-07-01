@@ -28,7 +28,7 @@ if __name__ == '__main__':
                 
     for l in range(len(num_lista)):
         if l<6:
-            aux_str=num_lista[l][1].split(' ')[0]+"\t"+num_lista[l][1].split(' ')[2]+"\t"+str(num_lista[l][0])
+            aux_str=num_lista[l][1].split(' ')[0]+"   "+num_lista[l][1].split(' ')[2]+"   "+str(num_lista[l][0])
             sys.stdout.write(aux_str+"\n")
         else:
             break
