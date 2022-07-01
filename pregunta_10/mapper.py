@@ -3,11 +3,10 @@
 #
 import sys
 
-if __name__ == '__main__':
-
-  for line in sys.stdin:
-
-    data= line.split()
-    letters= data[1].split(',')
-    for letter in letters:
-      sys.stdout.write("{}\t{}\n".format(letter, data[0]))
+if __name__ == "__main__":
+    for line in sys.stdin:
+        clave, valor = line.split("\t")
+        valor = list(valor.strip().split(","))
+        clave = clave.zfill(4)
+        for letra in valor:
+            sys.stdout.write("{}\t{}\n".format(letra, clave))
